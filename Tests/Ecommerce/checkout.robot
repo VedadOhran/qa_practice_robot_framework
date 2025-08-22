@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Test suite for verifying the checkout flow, ensuring that a user can submit the checkout form with valid data
+Documentation       Test suite for verifying the checkout flow, ensuring that a user can submit the checkout form with valid data
 
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/checkout_keywords.resource
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/products_keywords.resource

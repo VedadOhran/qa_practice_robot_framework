@@ -30,7 +30,6 @@ Select Country
     [Documentation]    Selects the specified country from the country drop-down list in the shipping form
     [Arguments]    ${COUNTRY_NAME}
     Select From List By Label    ${COUNTRY_DROP_LIST_LOCATOR}    ${COUNTRY_NAME}
-    Sleep    1s
 
 Submit Form
     [Documentation]    Submit the shipping form by clicking the submit button.

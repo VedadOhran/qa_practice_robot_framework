@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Products-related reusable keywords for verifying product visibility, adding products to the cart
+Documentation       Products-related keywords for verifying product visibility, adding products to the cart
 
 Library             String
 Library             SeleniumLibrary
