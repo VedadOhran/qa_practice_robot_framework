@@ -10,6 +10,7 @@ CART_TOTAL_PRICE_LOCATOR = "class:cart-total-price"  # Total price element in ca
 # Title based locator for itmes inside cart
 
 ITEM_IN_CART_BUTTON_LOCATOR_BY_TITLE = "xpath=//div[contains(@class, 'cart-row')][.//span[@class='cart-item-title' and text()='{title}']]//button[contains(@class, 'btn-danger')]" # Remove button for the cart item by title
+CART_ITEM_QUANTITY_INPUT_BY_TITLE = "xpath=//div[contains(@class, 'cart-row')][.//span[@class='cart-item-title' and text()='{title}']]//input[contains(@class, 'cart-quantity-input')]" # Quanity input for the cart item by title
 
 
 # Indexed locators for items inside cart

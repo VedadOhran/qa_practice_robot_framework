@@ -26,7 +26,7 @@ Verify Multiple Products Can Be Added To Cart
 
 Verify Product Can Be Removed From Cart
     [Documentation]    Verifies that a product can be removed from the cart by its index,
-    ...    and the cart updates accordingly, on teardown product is added again so the next test case do not fail
+    ...    and the cart updates accordingly
     Remove Product With Title ${PRODUCT_TITLE} From Cart
     Cart Should Not Contain Removed Product With Title ${PRODUCT_TITLE}
     Cart Total Should Be Updated After Product With Title ${PRODUCT_TITLE} Is Removed
@@ -37,3 +37,10 @@ Verify Multiple Products Can Be Removed From Cart
     Remove Products From List ${PRODUCTS_LIST} From Cart
     Cart Should Not Contain Removed Products From List ${PRODUCTS_LIST}
     Cart Total Should Be Updated After Products From List ${PRODUCTS_LIST} Are Removed
+
+Verify Quantity Can Be Increased For Item In Cart
+    [Documentation]    Verifies that product quantity increases in the cart,
+    ...    and the cart total is updated correctly
+    Add Product With Title ${PRODUCT_TITLE} To Cart
+    Increment Quantity Of Product ${PRODUCT_TITLE} By ${QUANTITY}
+    Cart Total Should Update When ${PRODUCT_TITLE} Quantity Increases By ${QUANTITY}

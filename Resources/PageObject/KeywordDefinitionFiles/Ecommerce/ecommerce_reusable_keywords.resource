@@ -10,7 +10,7 @@ Variables           ../../TestData/test_data.py
 
 *** Variables ***
 ${PREVIOUS_VALUE_PRICE}     0
-${CURRENCY}    $
+${CURRENCY}                 $
 
 
 *** Keywords ***
@@ -50,7 +50,7 @@ Get Count From List
 
 Get Product Price
     [Documentation]    Helper keyword created for cleaner cart_keywords.resource code
-    ...                Parses and returns the product price by product title
+    ...    Parses and returns the product price by product title
     [Arguments]    ${PRODUCT_TITLE}
     ${EXPECTED_VALUE_PRICE}=    Parse Price From String To Number
     ...    ${PRODUCT_PRICE_LOCATOR_BY_TITLE.format(title="${PRODUCT_TITLE}")}
@@ -59,7 +59,7 @@ Get Product Price
 
 Get Product Title Text
     [Documentation]    Helper keyword created for cleaner cart_keywords.resource code
-    ...                Returns the product title text by product title
+    ...    Returns the product title text by product title
     [Arguments]    ${PRODUCT_TITLE}
     ${PRODUCT_TITLE_TEXT}=    Get Text    ${PRODUCT_TITLE_LOCATOR_BY_TITLE.format(title="${PRODUCT_TITLE}")}
 
@@ -67,6 +67,13 @@ Get Product Title Text
 
 Get Cart Item Remove Button
     [Documentation]    Helper keyword created for cleaner and more readable cart_keywords.resource code
-    ...                Returns the locator for the cart item's remove button by product title
+    ...    Returns the locator for the cart item's remove button by product title
     [Arguments]    ${PRODUCT_TITLE}
     RETURN    ${ITEM_IN_CART_BUTTON_LOCATOR_BY_TITLE.format(title="${PRODUCT_TITLE}")}
+
+Get Increase Quanity Input
+    [Documentation]    Helepr keyword created for cleaner and more readable cart_keywrods.resource code
+    ...    Return the increase number of item in cart by product title
+    [Arguments]    ${PRODUCT_TITLE}
+
+    RETURN    ${CART_ITEM_QUANTITY_INPUT_BY_TITLE.format(title="${PRODUCT_TITLE}")}
