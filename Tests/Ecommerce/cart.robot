@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Test suite for verifying cart functionality: adding, removing products and updating cart totals
+Documentation       Test suite for verifying cart functionality
 
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/cart_keywords.resource
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/products_keywords.resource
@@ -11,36 +11,29 @@ Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/
 
 *** Test Cases ***
 Verify Product Can Be Added To Cart
-    [Documentation]    Verifies that a single product can be added to the cart,
-    ...    that it appears in the cart, and that the cart total is updated correctly
-    Add Product With Title ${PRODUCT_TITLE} To Cart
-    Cart Should Contain Product With Title ${PRODUCT_TITLE}
-    Cart Total Should Be Updated After Product With Title ${PRODUCT_TITLE} Is Added
+    [Documentation]    Single product flow
+    [Tags]    positive    regression
+    Add Product ${PRODUCT_TITLE} To Cart
+    Cart Should Contain Product ${PRODUCT_TITLE}
+    Cart Total Should Be Updated After Product ${PRODUCT_TITLE} Is Added
 
 Verify Multiple Products Can Be Added To Cart
-    [Documentation]    Verifies that multiple products can be added to the cart from a list,
-    ...    and that all products appear in the cart
-    Add Products From List ${PRODUCTS_LIST} To Cart
-    Cart Should Contain Products Added From List ${PRODUCTS_LIST}
-    Cart Total Should Be Updated After Products From List ${PRODUCTS_LIST} Are Added
+    [Documentation]    Multiple products flow
+    [Tags]    positive    regression
+    Add Products ${PRODUCTS_LIST} To Cart
+    Cart Should Contain Products ${PRODUCTS_LIST}
+    Cart Total Should Be Updated After Products ${PRODUCTS_LIST} Are Added
 
 Verify Product Can Be Removed From Cart
-    [Documentation]    Verifies that a product can be removed from the cart by its index,
-    ...    and the cart updates accordingly
-    Remove Product With Title ${PRODUCT_TITLE} From Cart
-    Cart Should Not Contain Removed Product With Title ${PRODUCT_TITLE}
-    Cart Total Should Be Updated After Product With Title ${PRODUCT_TITLE} Is Removed
-
-Verify Multiple Products Can Be Removed From Cart
-    [Documentation]    Verifies that multiple products can be removed from the cart from a list,
-    ...    and that all products disapear from the cart
-    Remove Products From List ${PRODUCTS_LIST} From Cart
-    Cart Should Not Contain Removed Products From List ${PRODUCTS_LIST}
-    Cart Total Should Be Updated After Products From List ${PRODUCTS_LIST} Are Removed
+    [Documentation]    Remove product flow
+    [Tags]    positive    regression
+    Remove Product ${PRODUCT_TITLE} From Cart
+    Cart Should Not Contain Removed Product ${PRODUCT_TITLE}
+    Cart Total Should Be Updated After Product ${PRODUCT_TITLE} Is Removed
 
 Verify Quantity Can Be Increased For Item In Cart
-    [Documentation]    Verifies that product quantity increases in the cart,
-    ...    and the cart total is updated correctly
-    Add Product With Title ${PRODUCT_TITLE} To Cart
+    [Documentation]    Quantity update
+    [Tags]    positive    regression
+    Add Product ${PRODUCT_TITLE} To Cart
     Increment Quantity Of Product ${PRODUCT_TITLE} By ${QUANTITY}
     Cart Total Should Update When ${PRODUCT_TITLE} Quantity Increases By ${QUANTITY}

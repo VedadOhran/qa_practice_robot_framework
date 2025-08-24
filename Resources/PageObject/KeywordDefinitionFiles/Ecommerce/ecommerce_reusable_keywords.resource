@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Reusable keywords for ordering operations: parsing prices, updating totals, and counting items, etc...
+Documentation       Reusable keywords for ordering operations
 
 Library             String
 Library             SeleniumLibrary
@@ -41,7 +41,7 @@ Update Cart Total
     RETURN    ${DISPLAY_VALUE}
 
 Get Count From List
-    [Documentation]    Returns the number of elements matching the locator, useful for verifying product counts or cart items
+    [Documentation]    Returns the number of elements matching the locator
     [Arguments]    ${LOCATOR}
     ${LIST}=    Get WebElements    ${LOCATOR}
     ${LIST_COUNT}=    Get Length    ${LIST}
