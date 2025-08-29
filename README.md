@@ -1,6 +1,6 @@
 QA Automation - Practice Site
 
-This repository contains automated tests for the QA Practice site: https://qa-practice.netlify.app/auth_ecommerce
+This repository contains automated tests for the QA Practice site: https://qa-practice.netlify.app/
 
 Project Structure
 
@@ -8,7 +8,7 @@ The project is organized according to the features and functionalities available
 
 Tests/ – contains Robot Framework test suites grouped by functionality available on the website.
 
-Resources/ – reusable keywords and helper functions.
+KeywordDefinitionFiles/ – reusable keywords and helper functions.
 
 Locators/ – element locators for different pages.
 
