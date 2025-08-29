@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Test suite for verifying login with valid and invalid credentials
 Library             SeleniumLibrary
-Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Forms/login_keywords.resource
+Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/Forms/login_keywords.resource
 Suite Setup         Open Browser    ${SITE_URL}    ${BROWSER}
 
 
@@ -11,10 +11,10 @@ Verify Login With Invalid Credentials Should Fail
     [Tags]    negative    regression    login
     [Template]    Login With Invalid Credentials
     ${INVALID_EMAIL}    ${VALID_PASSWORD}    # Invalid Email + Valid Password
-    ${VALID_EMAIL}      ${INVALID_PASSWORD}  # Valid Email + Invalid Password
     ${INVALID_EMAIL}    ${INVALID_PASSWORD}  # Invalid Email + Invalid Password
-    ${EMPTY}            ${VALID_PASSWORD}    # Empty Email + Valid Password
+    ${VALID_EMAIL}      ${INVALID_PASSWORD}  # Valid Email + Invalid Password
     ${VALID_EMAIL}      ${EMPTY}             # Valid Email + Empty Password
+    ${EMPTY}            ${VALID_PASSWORD}    # Empty Email + Valid Password
     ${EMPTY}            ${EMPTY}             # Empty Email + Empty Password
 
 Verify Login With Valid Credentials Should Pass

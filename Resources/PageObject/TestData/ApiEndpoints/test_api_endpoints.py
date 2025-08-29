@@ -1,0 +1,5 @@
+BASE_URL = 'http://localhost:8887/api/v1'
+ALL_EMPLOYEES = '/employees'
+EMPLOYEE_BY_ID = '/employees/{id}'
+RETURN_TOKEN = '/simulate/token'
+REQUIRE_AUTHORIZATION_EMPLOYEES = '/simulate/get/employees'

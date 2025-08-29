@@ -50,7 +50,7 @@ Get Count From List
 
 Get Product Price
     [Documentation]    Helper keyword created for cleaner cart_keywords.resource code
-    ...    Parses and returns the product price by product title
+    ...    Parses and returns the product price of the specified product title
     [Arguments]    ${PRODUCT_TITLE}
     ${EXPECTED_VALUE_PRICE}=    Parse Price From String To Number
     ...    ${PRODUCT_PRICE_LOCATOR_BY_TITLE.format(title="${PRODUCT_TITLE}")}
@@ -59,7 +59,7 @@ Get Product Price
 
 Get Product Title Text
     [Documentation]    Helper keyword created for cleaner cart_keywords.resource code
-    ...    Returns the product title text by product title
+    ...    Returns the text of the specified product title
     [Arguments]    ${PRODUCT_TITLE}
     ${PRODUCT_TITLE_TEXT}=    Get Text    ${PRODUCT_TITLE_LOCATOR_BY_TITLE.format(title="${PRODUCT_TITLE}")}
 

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation       Test suite for verifying product visibility and UI and DB consistency
-Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/products_keywords.resource
+Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/products_keywords.resource
 
 
 *** Variables ***
