@@ -3,9 +3,9 @@ Documentation       Reusable keywords for ordering operations
 
 Library             String
 Library             SeleniumLibrary
-Variables           ../../Locators/Ecommerce/products_locators.py
-Variables           ../../Locators/Ecommerce/cart_locators.py
-Variables           ../../TestData/test_data.py
+Variables           ../../../Locators/Ecommerce/products_locators.py
+Variables           ../../../Locators/Ecommerce/cart_locators.py
+Variables           ../../../TestData/test_data.py
 
 
 *** Variables ***

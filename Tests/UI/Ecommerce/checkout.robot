@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation       Test suite for verifying checkout flow
 
-Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/checkout_keywords.resource
-Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/products_keywords.resource
+Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/UI/Ecommerce/checkout_keywords.resource
+Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/UI/Ecommerce/products_keywords.resource
 
 
 *** Test Cases ***

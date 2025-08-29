@@ -2,9 +2,9 @@
 Documentation       Login form keywords for entering credentials, submitting the form, and verifying login success or failure
 
 Library             SeleniumLibrary
-Variables           ../../TestData/test_data.py
-Variables           ../../Locators/Forms/login_locators.py
-Variables           ../../Locators/Ecommerce/products_locators.py
+Variables           ../../../TestData/test_data.py
+Variables           ../../../Locators/Forms/login_locators.py
+Variables           ../../../Locators/Ecommerce/products_locators.py
 
 
 *** Keywords ***

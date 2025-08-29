@@ -3,8 +3,8 @@ Documentation       Products-related keywords
 
 Library             String
 Library             SeleniumLibrary
-Variables           ../../Locators/Ecommerce/products_locators.py
-Resource            ./ecommerce_reusable_keywords.resource
+Variables           ../../../Locators/Ecommerce/products_locators.py
+Resource            ././ecommerce_reusable_keywords.resource
 
 
 *** Keywords ***

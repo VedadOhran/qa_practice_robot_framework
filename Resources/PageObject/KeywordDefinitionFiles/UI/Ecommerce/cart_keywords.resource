@@ -2,8 +2,8 @@
 Documentation       Cart-related keywords - add/remove products and total updates
 
 Library             SeleniumLibrary
-Variables           ../../Locators/Ecommerce/cart_locators.py
-Resource            ./ecommerce_reusable_keywords.resource
+Variables           ../../../Locators/Ecommerce/cart_locators.py
+Resource            ././ecommerce_reusable_keywords.resource
 
 
 *** Keywords ***

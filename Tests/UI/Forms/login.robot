@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Test suite for verifying login with valid and invalid credentials
 Library             SeleniumLibrary
-Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/Forms/login_keywords.resource
+Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/UI/Forms/login_keywords.resource
 Suite Setup         Open Browser    ${SITE_URL}    ${BROWSER}
 
 

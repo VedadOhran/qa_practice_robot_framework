@@ -2,8 +2,8 @@
 Documentation       Checkout-related keywords
 
 Library             SeleniumLibrary
-Variables           ../../Locators/Ecommerce/checkout_locators.py
-Variables           ../../TestData/test_data.py
+Variables           ../../../Locators/Ecommerce/checkout_locators.py
+Variables           ../../../TestData/test_data.py
 
 
 *** Keywords ***

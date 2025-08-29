@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation       Test suite for verifying cart functionality
 
-Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/cart_keywords.resource
-Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/Ecommerce/products_keywords.resource
+Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/UI/Ecommerce/cart_keywords.resource
+Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/UI/Ecommerce/products_keywords.resource
 
 
 *** Variables ***
