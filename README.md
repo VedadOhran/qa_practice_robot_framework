@@ -64,5 +64,5 @@ Simulate an internal server error.
 POST /api/v1/simulate/token
 Simulate an endpoint that returns a JWT token. Use admin for both username and password.
 
-To execute the full UI test suite, run the following command from the project root:
+To execute the full API test suite, run the following command from the project root:
 robot -d results Tests/API/employee_api.robot
