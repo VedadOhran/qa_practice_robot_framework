@@ -1,15 +1,16 @@
 *** Settings ***
-Documentation    Api-related keywords
-Library    Collections
-Library    RequestsLibrary
-Library    JSONLibrary
-Variables    ../../TestData/ApiEndpoints/test_api_endpoints.py
-Variables    ../../TestData/test_data.py
+Documentation       Api-related keywords
+
+Library             Collections
+Library             RequestsLibrary
+Library             JSONLibrary
+Variables           ../../TestData/ApiEndpoints/test_api_endpoints.py
+Variables           ../../TestData/test_data.py
 
 
 *** Variables ***
-${SCHEMA_FILE_BASE}   ${CURDIR}${/}../../TestData
-${EMPLOYE_SCHEMA_FILE}    ${SCHEMA_FILE_BASE}/JsonModelsSchema/employee_schema.json
+${SCHEMA_FILE_BASE}         ${CURDIR}${/}../../TestData
+${EMPLOYE_SCHEMA_FILE}      ${SCHEMA_FILE_BASE}/JsonModelsSchema/employee_schema.json
 
 
 *** Keywords ***
@@ -49,10 +50,24 @@ Delete Employee By Id ${EMPLOYEE_ID}
     [Arguments]    ${SESSION_NAME}    ${BASE_URL}
     DELETE On Session    ${SESSION_NAME}    ${BASE_URL}${EMPLOYEE_BY_ID.format(id=${EMPLOYEE_ID})}
 
+Update Employee By Id ${EMPLOYEE_ID}
+    [Documentation]    Update employee by the given id
+    [Arguments]    ${SESSION_NAME}    ${BASE_URL}    ${EMPLOYEE_JSON_FILE}
+    ${HEADERS}=    Create Dictionary    Content-Type=application/json
+    ${DATA}=    Load Json From File    ${EMPLOYEE_JSON_FILE}
+    PUT On Session
+    ...    ${SESSION_NAME}
+    ...    ${BASE_URL}${EMPLOYEE_BY_ID.format(id=${EMPLOYEE_ID})}
+    ...    json=${DATA}
+    ...    headers=${HEADERS}
+
 Get All Employees Authorized
     [Documentation]    Get all employees endpoint that requires authorization
     [Arguments]    ${SESSION_NAME}    ${BASE_URL}    ${HEADERS}
-    ${RESPONSE}=    GET On Session    ${SESSION_NAME}    ${BASE_URL}${REQUIRE_AUTHORIZATION_EMPLOYEES}    headers=${HEADERS}
+    ${RESPONSE}=    GET On Session
+    ...    ${SESSION_NAME}
+    ...    ${BASE_URL}${REQUIRE_AUTHORIZATION_EMPLOYEES}
+    ...    headers=${HEADERS}
 
     RETURN    ${RESPONSE}
 

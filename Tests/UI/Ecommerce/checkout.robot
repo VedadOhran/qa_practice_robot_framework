@@ -4,11 +4,12 @@ Documentation       Test suite for verifying checkout flow
 Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/UI/Ecommerce/checkout_keywords.resource
 Resource            ../../../Resources/PageObject/KeywordDefinitionFiles/UI/Ecommerce/products_keywords.resource
 
+Test Tags           regression    positive
+
 
 *** Test Cases ***
 Verify Checkout Form Submission With Valid Data
     [Documentation]    Valid checkout flow
-    [Tags]    positive    regression
     Proceed To Checkout
     Form Should Be Visible
     Input Phone    ${VALID_PHONE_NUMBER}
